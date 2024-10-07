@@ -1,23 +1,20 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 
-const counter = ref(0)
+const name = ref('')
 
-function increment(count: number) {
-  counter.value += count
-}
+const weirdName = ref('')
 
-function decrement() {
-  counter.value--
-}
-
+watch(name, (newName) => {
+  weirdName.value = '-' + newName + '-'
+})
 </script>
 
 <template>
-  <div>Count {{ counter }}</div>
+  <div>{{ name }}</div>
 
-  <button @click="() => increment(3)">Increment</button>
-  <button @click="decrement">Decrement</button>
+  <input :value="name" @input.prevent="(e) => (name = e.target.value)" />
+  <div>othername {{ weirdName }}</div>
 </template>
 
 <style scoped></style>

@@ -1,20 +1,16 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue'
-
-const name = ref('')
-
-const weirdName = ref('')
-
-watch(name, (newName) => {
-  weirdName.value = '-' + newName + '-'
-})
+import BasicState from '@/1-state-and-effects/BasicState.vue'
+import BasicParent from '@/2-props-input-control/BasicParent.vue'
+import ScrtchPad from '@/2-props-input-control/ScrtchPad.vue'
 </script>
 
 <template>
-  <div>{{ name }}</div>
+  <h3>1.</h3>
+  <BasicState />
 
-  <input :value="name" @input.prevent="(e) => (name = e.target.value)" />
-  <div>othername {{ weirdName }}</div>
+  <h3>2.</h3>
+  <ScrtchPad />
+  <basic-parent />
 </template>
 
 <style scoped></style>

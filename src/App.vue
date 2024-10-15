@@ -4,6 +4,7 @@ import BasicParent from '@/2-props-input-control/BasicParent.vue'
 import ScratchPad from '@/2-props-input-control/ScratchPad.vue'
 import IfAndFor from '@/3-rendering/IfAndFor.vue'
 import TrySlots from '@/3-rendering/TrySlots.vue'
+import ProviderParent from '@/4-provide-inject/ProviderParent.vue'
 </script>
 
 <template>
@@ -20,6 +21,8 @@ import TrySlots from '@/3-rendering/TrySlots.vue'
     <div>this is a slot children</div>
   </TrySlots>
 
+  <h3>4.</h3>
+  <ProviderParent />
 </template>
 
 <style scoped></style>

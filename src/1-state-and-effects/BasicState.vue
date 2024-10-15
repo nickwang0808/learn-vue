@@ -7,7 +7,7 @@ function changeCountBy(changeBy: number) {
   count.value += changeBy
 }
 
-watch(count, (prev) => {
+watch([count], (prev) => {
   console.log(`prevcount is ${prev}`)
   console.log(`new count is ${count.value}`)
 })

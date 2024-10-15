@@ -5,6 +5,7 @@ import ScratchPad from '@/2-props-input-control/ScratchPad.vue'
 import IfAndFor from '@/3-rendering/IfAndFor.vue'
 import TrySlots from '@/3-rendering/TrySlots.vue'
 import ProviderParent from '@/4-provide-inject/ProviderParent.vue'
+import CustomComposable from '@/5-http-custom composables/CustomComposable.vue'
 </script>
 
 <template>
@@ -23,6 +24,9 @@ import ProviderParent from '@/4-provide-inject/ProviderParent.vue'
 
   <h3>4.</h3>
   <ProviderParent />
+
+  <h3>5.</h3>
+  <CustomComposable />
 </template>
 
 <style scoped></style>

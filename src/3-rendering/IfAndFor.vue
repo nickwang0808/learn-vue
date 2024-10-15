@@ -8,6 +8,11 @@ const listData = [0, 1, 2, 3, 4, 5, 6, 7, 8]
     <div v-else-if="element % 2 === 1">{{ element }} is odd</div>
     <div v-else>Invalid</div>
   </div>
+
+  <div v-show="true">
+    hello
+  </div>
+
 </template>
 
 <style scoped></style>

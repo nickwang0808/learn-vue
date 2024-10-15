@@ -8,7 +8,8 @@ const password = ref<string>('')
 
 const hashedPassword = computed(() => {
   // run crazy algo to hash the password
-  return hashPassword(password);
+  // return hashPassword(password);
+  return password;
 })
 
 watch(userName, () => {

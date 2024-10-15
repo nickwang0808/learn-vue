@@ -1,9 +1,15 @@
 ﻿<script setup lang="ts">
 import BasicInput from '@/2-props-input-control/BasicInput.vue'
-import { ref, watch } from 'vue'
+import { computed, ref, watch } from 'vue'
+import { hashPassword } from '@/utils'
 
 const userName = ref<string>('')
 const password = ref<string>('')
+
+const hashedPassword = computed(() => {
+  // run crazy algo to hash the password
+  return hashPassword(password);
+})
 
 watch(userName, () => {
   console.log(userName.value)
@@ -11,11 +17,17 @@ watch(userName, () => {
 </script>
 
 <template>
-  <BasicInput v-model:user-name="userName" v-model:password="password" form-title="Registration" />
+  <BasicInput
+    v-model:user-name="userName"
+    :password="password"
+    @update:password="(value) => (password = value)"
+    form-title="Registration"
+  />
 
   <div>Hacker watching</div>
   <div>Username is {{ userName }}</div>
   <div>Password is {{ password }}</div>
+  <div>Hashed Password is {{ hashedPassword }}</div>
 </template>
 
 <style scoped></style>

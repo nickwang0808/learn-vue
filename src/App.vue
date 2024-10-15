@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import BasicState from '@/1-state-and-effects/BasicState.vue'
 import BasicParent from '@/2-props-input-control/BasicParent.vue'
-import ScrtchPad from '@/2-props-input-control/ScrtchPad.vue'
+import ScratchPad from '@/2-props-input-control/ScratchPad.vue'
 </script>
 
 <template>
@@ -9,7 +9,7 @@ import ScrtchPad from '@/2-props-input-control/ScrtchPad.vue'
   <BasicState />
 
   <h3>2.</h3>
-  <ScrtchPad />
+  <ScratchPad />
   <basic-parent />
 </template>
 
